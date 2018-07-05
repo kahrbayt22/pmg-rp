@@ -14,12 +14,10 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '$'
+const prefix = '#'
 
 client.on('ready', () => {
-    console.log('--------------!');
-    console.log('| - Kahrba. - |');
-    console.log('--------------!');
+    console.log('I am ready!');
 });
 
 client.on('message', message => {
@@ -31,7 +29,7 @@ client.on('message', message => {
 client.on('message',function(message) {
     
     if(message.content.startsWith("<@464237073407410176>")) {
-        message.channel.send('Hey Im **PMG-RP - Bot.**  A Nice Bot Developed By:`@*Kahrba. ، ✩#1863 `')
+        message.channel.send('Hey Im **PMG-Rp - Bot.**  A Nice Bot Developed By:`@*Kahrba. ، ✩#1863 `')
 
     }
 });
@@ -49,7 +47,7 @@ client.on('message', message => {
 
 
 if (command == "say") {
-let rank = message.guild.member(message.author).roles.find('name', ' ');
+let rank = message.guild.member(message.author).roles.find('name', 'ᘩThe KING ♚');
 if (!rank) return message.reply('انت لا تمتلك الرتبه المخصصه لهذا الامر')
   message.channel.send(args.join("  "))
     message.delete();
@@ -89,9 +87,8 @@ client.on('message', message => {
     }
 });
 
-
 client.on('message', eyad => {
-  if (eyad.content.startsWith('$vban')) {
+  if (eyad.content.startsWith('#$ban')) {
 if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
 let men = eyad.mentions.users.first()
 let mas = eyad.author
@@ -220,31 +217,31 @@ client.on('message', message => {
       if (!message.content.startsWith(prefix)) return;
       var args = message.content.split(' ').slice(1);
       var argresult = args.join(' ');
-      if (message.author.id == 346045919072092161) return;
+      if (message.author.id == 286088294234718209) return;
 
 
     if (message.content.startsWith(prefix + 'playing')) {
-    if (message.author.id !== '346045919072092161') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '286088294234718209') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
     } else
 
 
     if (message.content.startsWith(prefix + 'streem')) {
-    if (message.author.id !== '346045919072092161') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '286088294234718209') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult, "http://twitch.tv/i_kahrba999");
         message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
     } else
 
     if (message.content.startsWith(prefix + 'setname')) {
-    if (message.author.id !== '346045919072092161') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '286088294234718209') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
       client.user.setUsername(argresult).then
           message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
       return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
     } else
 
     if (message.content.startsWith(prefix + 'setavatar')) {
-    if (message.author.id !== '346045919072092161') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '286088294234718209') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setAvatar(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
     }
@@ -303,38 +300,6 @@ client.on("message", message => {
      });
     }
 });
-\\
-client.on('messageUpdate', (oldRebel, newRebel) => {
-    console.log("عصو مآ يحآول التعديل.");
-   if (newRebel.content.toUpperCase().match(/DISCORD.GG/i))
-    {
-        console.log(newRebel.author.name + " حاول النشر عبر تعديل الرسآلة - " + newRebel);
-           newRebel.delete().catch(O_o=>{}); 
-           newRebel.author.send("ممنوع روآبط الدسكورد. \n إذآ كنت تريد النشر توآصل من الإدآرة.");
-    }
-});
-\\
-client.on('message', function(message) {
-    if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-            let command = message.content.split(" ")[0];
-        if(message.content.includes('discord.gg')){
-        message.reply (' ')
-           if(!message.channel.guild) return message.reply('** This command only for servers**');
-     message.member.addRole(message.guild.roles.find('name', 'Muted')); 
-    const embed500 = new Discord.RichEmbed()
-      .setTitle(":x: | تمت معاقبتك")
-            .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الميوت عن طريق الخطأ تكلم مع الادآرة**`)
-      .addField(`by`,`*Kahrba. ، ✩`)
-            .setColor("c91616")
-            .setThumbnail(`${message.author.avatarURL}`)
-            .setAuthor(message.author.username, message.author.avatarURL) 
-        .setFooter(`${message.guild.name} Server`)
-     message.channel.send(embed500) 
-    
-        
-    }
-    }
-})
 
 client.on('message', message => {
     var prefix = "$";
@@ -364,9 +329,9 @@ client.on('message', message => {
             return;
         }
     });
-    
 
 
 
 
-client.login(process.env.BOT_TOKEN);
+
+client.login(process.env.TOKEN);
