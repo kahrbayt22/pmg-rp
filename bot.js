@@ -314,26 +314,6 @@ client.on('messageUpdate', (oldRebel, newRebel) => {
     }
 });
 \\
-  client.on('message',async message => {
-    if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "286088294234718209") return message.reply('You aren\'t the bot owner.');
-        message.channel.send('**Restarting.**').then(msg => {
-            setTimeout(() => {
-               msg.edit('**Restarting..**');
-            },1000);
-            setTimeout(() => {
-               msg.edit('**Restarting...**');
-            },2000);
-        });
-        console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
-        console.log(`Restarting..`);
-        setTimeout(() => {
-            client.destroy();
-            client.login(process.env.TOKEN2);
-        },3000);
-    }
-});
-\\
 var dat = JSON.parse("{}");
 function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
