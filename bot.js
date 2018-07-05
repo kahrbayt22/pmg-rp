@@ -14,7 +14,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '#'
+const prefix = '$'
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -88,7 +88,7 @@ client.on('message', message => {
 });
 
 client.on('message', eyad => {
-  if (eyad.content.startsWith('#$ban')) {
+  if (eyad.content.startsWith('$ban')) {
 if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
 let men = eyad.mentions.users.first()
 let mas = eyad.author
