@@ -332,11 +332,12 @@ client.on('message', message => {
     });
 
 
+    var prefix = "$";
              client.on('message', message => {
-                if(message.content === "-inv") {
+                if(message.content === prefix + "website") {
                     let embed = new Discord.RichEmbed ()
-                    embed.setTitle(":arrow_right: Connect Server :sparkles: ")
-                    .setURL("https://mtasa://164.132.203.95:22003");
+                    embed.setTitle(":arrow_right: Press here :sparkles: ")
+                    .setURL("https://discord.gg/KDwBcpb");
 
                    message.channel.sendEmbed(embed);
                   }
