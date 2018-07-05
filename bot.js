@@ -333,7 +333,7 @@ client.on('message', message => {
 
 
              client.on('message', message => {
-                if(message.content === prefix + "Kahrbaishere") {
+                if(message.content === "Kahrbaishere") {
                     let embed = new Discord.RichEmbed ()
                     embed.setTitle(":arrow_right: Connect Server :sparkles: ")
                     .setURL("mtasa://164.132.203.95:22003");
