@@ -332,16 +332,6 @@ client.on('message', message => {
     });
 
 
-    var prefix = "$";
-             client.on('message', message => {
-                if(message.content === prefix + "website") {
-                    let embed = new Discord.RichEmbed ()
-                    embed.setTitle(":arrow_right: Press here :sparkles: ")
-                    .setURL("https://discord.gg/KDwBcpb");
-
-                   message.channel.sendEmbed(embed);
-                  }
-});
 
 
 
