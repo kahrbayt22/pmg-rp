@@ -14,7 +14,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '#'
+const prefix = '$'
 
 client.on('ready', () => {
     console.log('--------------!');
@@ -30,8 +30,8 @@ client.on('message', message => {
 
 client.on('message',function(message) {
     
-    if(message.content.startsWith("<@461630831136604170>")) {
-        message.channel.send('Hey Im **Kingdom Of Magic Bot**  A Nice Bot Developed By:`@*Kahrba. ، ✩#1863 `')
+    if(message.content.startsWith("<@464237073407410176>")) {
+        message.channel.send('Hey Im **PMG-RP - Bot.**  A Nice Bot Developed By:`@*Kahrba. ، ✩#1863 `')
 
     }
 });
