@@ -29,7 +29,8 @@ client.on('message', message => {
 client.on('message',function(message) {
     
     if(message.content.startsWith("<@464237073407410176>")) {
-        message.channel.send('Hey Im **PMG-Rp - Bot.**  A Nice Bot Developed By:`@*Kahrba. ، ✩#1863 ` `@AhmedAlashaq. ، ✩#5531 `')
+        message.channel.send('Hey Im **PMG-Rp - Bot.**  A Nice Bot Developed By:`@*Kahrba. ، ✩#1863  ')
+        message.channel.send('Hey Im **PMG-Rp - Bot.**  A Nice Bot Developed By:`@AhmedAlashaq. ، ✩#5531 ')
 
     }
 });
