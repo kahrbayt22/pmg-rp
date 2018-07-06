@@ -89,7 +89,7 @@ client.on('message', message => {
 });
 
 client.on('message', eyad => {
-  if (eyad.content.startsWith('$ban')) {
+  if (eyad.content.startsWith('$vban')) {
 if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
 let men = eyad.mentions.users.first()
 let mas = eyad.author
@@ -194,7 +194,7 @@ client.on('message' , message => {
      var codes = args.join(' ')
        
         if(!codes) {
-          message.channel.send("قم بكتابة الرسالة | `#rolebc role message`")
+          message.channel.send("قم بكتابة الرسالة | `$rolebc role message`")
             return;
         }
      
